@@ -6,18 +6,17 @@ Some SNAPSHOTS
 
 LOGIN PAGE:
  
-![image](https://user-images.githubusercontent.com/81229505/218517171-a1e8a262-c7eb-4e0d-8785-d78d56c3c96c.png)
 
- ![image](https://user-images.githubusercontent.com/81229505/218517297-561099fd-2365-4ccf-8155-a2e90cc87c01.png)
+ ![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/24693600-84b1-412a-b02c-8ea1df08c90d)
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/b750dc9b-e363-4387-a0fb-49d2ea336102)
 
 
 
 
 REGISTRATION PAGE:
  
-![image](https://user-images.githubusercontent.com/81229505/218517346-6d05d35d-67e6-4702-ad15-9cbb41e16042.png)
-
-![image](https://user-images.githubusercontent.com/81229505/218517368-44607c8a-b330-4433-8fdb-d28fbb94d387.png)
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/b495d9c7-e78c-4c23-9ec3-8edf39e2c49e)
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/c3d3a99a-9523-44e1-85a3-0e858427b833)
 
  
 
@@ -25,59 +24,87 @@ REGISTRATION PAGE:
 
 
 ADMIN DASHBOARD PAGE:
- 
- ![image](https://user-images.githubusercontent.com/81229505/218517407-ea903373-1141-4827-a0eb-4c5bf4306b5e.png)
+ ![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/f418e228-16e3-47de-8301-52e49516c6b9)
 
 
 UPDATE PROFILE PICTURE / CHANGE PASSWORD PAGE:
  
-![image](https://user-images.githubusercontent.com/81229505/218517454-7deeed97-a99f-4887-8b2f-6dd8e4273a17.png)
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/a720600a-bb8c-447b-9883-f6fca38f09bf)
 
 
 
 
 FEEDBACK MESSAGES PAGE:
- 
- ![image](https://user-images.githubusercontent.com/81229505/218517489-e25417e3-97f9-4174-bf4c-33a26cd53cff.png)
+ ![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/3e96e052-9e8b-4b99-b95a-f87c0def2ba9)
 
 
 MANAGE ACCOUNTS / USERS PAGE:
+ 
 
-![image](https://user-images.githubusercontent.com/81229505/218517536-1054f5a1-06b9-47a8-bc5a-a1cb13603473.png)
-
-
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/89b64e80-9c61-4f5d-8976-b838fcc52809)
 
 
 
 
 NOTIFICATION OF BUS (in every 10 seconds) PAGE:
  
- ![image](https://user-images.githubusercontent.com/81229505/218517571-b2c3e6d7-aada-42b0-b3bf-0237131280d2.png)
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/33b1331e-56a9-4c8e-9c39-420b60099474)
+
+UPLOAD STUDENT DETAILS:
+ 
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/2816a916-d1ed-4e20-84d7-f3b0aa5da55f)
+
+
+
+
+MANAGEMENT OF THE FEES( by clicking paid/pending button):
+
+ 
+ ![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/aa287603-ba18-49e7-9c73-fccf11822909)
 
 
 PERANT HOME PAGE:
  
-![image](https://user-images.githubusercontent.com/81229505/218517612-0eacb0e7-1106-47c9-832d-b818598870de.png)
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/e6af864a-0cf6-4d02-86a3-96c158536b92)
 
 
 
 
 
 FEEDBACK PAGE:
- 
- ![image](https://user-images.githubusercontent.com/81229505/218517653-e2eb04b0-8f2f-424f-9116-76c828b6b614.png)
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/de4fc506-ce99-4065-a1a6-b9e9e0c9d70e)
 
+ 
 
 TRACKED LOCATION OF BUS PAGE:
  
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/fb832459-37b5-4a0f-8f48-e0847702dc32)
 
-![image](https://user-images.githubusercontent.com/81229505/218517710-17d8367a-6cf4-479c-ab0c-440971521cd2.png)
+
+GALLERY:
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/b7c2c91c-ee89-4c43-98a6-78f94fe8a822)
+ 
+
+STUDENT INFO:
+ 
+
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/8cc36135-f15c-410c-972e-5520ee8feb15)
+
+
 
 
 DRIVER DASHBOARD PAGE:
  
+![image](https://github.com/pawarjay1/Bus-managment-system/assets/81229505/ce5acb76-5aed-49b1-9d0a-451df9756857)
 
-![image](https://user-images.githubusercontent.com/81229505/218517740-24c022cc-764e-4777-a86b-f2bce782af73.png)
+
+
+
+
+
+
+
+
 
 
 
