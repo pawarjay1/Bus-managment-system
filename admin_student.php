@@ -10,6 +10,9 @@ if (!isset($_SESSION['name'])) {
 }
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,6 +96,14 @@ if (!isset($_SESSION['name'])) {
             </li>
 
             <li>
+                <a href="admin_fees_info.php">
+                    <i class='bx bx-money'></i>
+                    <span class="link_name">Fees info</span>
+                </a>
+
+            </li>
+
+            <li>
                 <a href="logout.php">
                     <i class='bx bx-log-out'></i>
                     <span class="link_name">Log-Out</span>
@@ -112,25 +123,25 @@ if (!isset($_SESSION['name'])) {
                 <div class="flex">
                     <div class="inputBox">
                         <span>EnrollmentNo :</span>
-                        <input type="text" name="update_name" class="box" placeholder="enter enrollment number" value="">
+                        <input type="text" name="eno" class="box" placeholder="enter enrollment number" value="">
                         <span>Student Name :</span>
-                        <input type="email" name="update_email" class="box" placeholder="enter student name" value="">
+                        <input type="text" name="name" class="box" placeholder="enter student name" value="">
                         
                         <span>Choose Degree :</span>
-                        <select class="box">
+                        <select name="degree" class="box">
                             <option>Diploma</option>
                             <option>BE</option>
                             <option>bvoc</option>
                         </select>
 
                         <span>Email :</span>
-                        <input type="email" name="update_image"  class="box" placeholder="enter student email">
+                        <input type="email" name="email"  class="box" placeholder="enter student email">
                         
                     </div>
                     <div class="inputBox">
                         
                         <span>Department :</span>
-                        <select class="box">
+                        <select name="dept" class="box">
                             <option>Computer</option>
                             <option>Mechanical</option>
                             <option>Chemical</option>
@@ -138,17 +149,17 @@ if (!isset($_SESSION['name'])) {
                         </select>
 
                         <span>Route of the Bus :</span>
-                        <select class="box">
+                        <select name="bus_route" class="box">
                             <option>Surat</option>
                             <option>Navsari</option>
                             <option>Bardoli</option>
                         </select>
 
                         <span>Address :</span>
-                        <textarea name="" id="" cols="30" rows="5" placeholder="enter full address" class="box"></textarea>
+                        <textarea name="addres" id="" cols="30" rows="5" placeholder="enter full address" class="box"></textarea>
                     </div>
                 </div>
-                <input type="submit" value="Upload Student" name="update_profile" class="btn">
+                <input type="submit" value="Upload Student" name="Upload_Student" class="btn">
 
             </form>
 

@@ -46,6 +46,15 @@ if(!isset($_SESSION['name'])){
                 </a>
 
             </li>
+
+            <li>
+                <a href="parent_gallery.php">
+                    <i class='bx bx-folder'></i>
+                    <span class="link_name">Gallery</span>
+                </a>
+
+            </li>
+
             <li>
                 <a href="perant_profile.php">
                     <i class='bx bx-user'></i>
@@ -60,6 +69,15 @@ if(!isset($_SESSION['name'])){
                 </a>
 
             </li>
+
+            <li>
+                <a href="parent_student_detail.php">
+                    <i class='bx bx-chat'></i>
+                    <span class="link_name">student info</span>
+                </a>
+
+            </li>
+            
             <!-- <li>
                 <a href="#">
                     <i class='bx bxs-user-rectangle'></i>

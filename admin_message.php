@@ -98,6 +98,21 @@ if(isset($_GET['delete'])){
                 </a>
 
             </li> -->
+            <li>
+                <a href="admin_student.php">
+                    <i class='bx bx-plus'></i>
+                    <span class="link_name">Student</span>
+                </a>
+
+            </li>
+            
+            <li>
+                <a href="admin_fees_info.php">
+                    <i class='bx bx-money'></i>
+                    <span class="link_name">Fees info</span>
+                </a>
+
+            </li>
 
             <li>
                 <a href="logout.php">

@@ -76,6 +76,15 @@ if(isset($_POST['update_profile'])){
                 </a>
 
             </li>
+
+            <li>
+                <a href="parent_gallery.php">
+                    <i class='bx bx-folder'></i>
+                    <span class="link_name">Gallery</span>
+                </a>
+
+            </li>
+            
             <li>
                 <a href="perant_profile.php" class="active">
                     <i class='bx bx-user'></i>
@@ -87,6 +96,14 @@ if(isset($_POST['update_profile'])){
                 <a href="perant_feedback.php">
                     <i class='bx bx-chat'></i>
                     <span class="link_name">Feedback</span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="parent_student_detail.php">
+                    <i class='bx bx-chat'></i>
+                    <span class="link_name">student info</span>
                 </a>
 
             </li>

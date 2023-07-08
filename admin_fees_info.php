@@ -1,24 +1,14 @@
 <?php
-
 @include 'config.php';
-
 session_start();
 $user_id = $_SESSION['name'];
 
-if(!isset($_SESSION['name'])){
-   header('location:login.php');
+if (!isset($_SESSION['name'])) {
+    header('location:login.php');
 }
-
-if(isset($_GET['delete'])){
-
-    $delete_id = $_GET['delete'];
-    $delete_users = mysqli_query($conn,"DELETE FROM `users` WHERE id = '".$delete_id."'");
-    // $delete_users->execute([$delete_id]);
-    // $delete_id = $fetch[$delete_id];
-    header('location:admin_accounts.php');
- 
- }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,8 +17,51 @@ if(isset($_GET['delete'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="./css/update_profile.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Admin panel</title>
+    <title>Admin Fees Info</title>
+
+    <style>
+    table,th,td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px; 
+        text-align: center;
+    }
+    th {
+        background-color: #8581fc;
+    }
+    .paid{
+        width: 55%;
+        padding:5px 10px;
+        color:white;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: green;
+        border-radius: 5px;
+        display: block;
+        margin: auto;
+    }
+    .pending{
+        width: 45%;
+        padding:5px 10px;
+        color:white;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: red;
+        border-radius: 5px;
+        display: block;
+        margin: auto;
+        
+    }
+    
+    </style>
 </head>
 
 <body>
@@ -39,7 +72,7 @@ if(isset($_GET['delete'])){
                 <i class="fa-solid fa-user"></i>
                 <div class="logo_name"><?php echo $_SESSION['uname'] ?> Panel</div>
             </div>
-            
+
         </div>
         <ul class="nav_list">
             <li>
@@ -64,7 +97,7 @@ if(isset($_GET['delete'])){
 
             </li>
             <li>
-                <a href="admin_accounts.php" class="active">
+                <a href="admin_accounts.php">
                     <i class='bx bxs-user-rectangle'></i>
                     <span class="link_name">Accounts</span>
                 </a>
@@ -90,13 +123,6 @@ if(isset($_GET['delete'])){
                     <span class="link_name">File Manager</span>
                 </a>
 
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-cog'></i>
-                    <span class="link_name">Setting</span>
-                </a>
-
             </li> -->
             <li>
                 <a href="admin_student.php">
@@ -107,7 +133,7 @@ if(isset($_GET['delete'])){
             </li>
 
             <li>
-                <a href="admin_fees_info.php">
+                <a href="admin_fees_info.php" class="active">
                     <i class='bx bx-money'></i>
                     <span class="link_name">Fees info</span>
                 </a>
@@ -123,32 +149,47 @@ if(isset($_GET['delete'])){
             </li>
         </ul>
     </div>
-
     <div class="main">
-        
-        <?php
-            $select = mysqli_query($conn, "SELECT * FROM `users`") or die('query failed');
+
+             <table style="width:100%">
+                <tr>
+                    <th>Enrollment no</th>
+                    <th>Student Name</th>
+                    <th>Bus Route</th>
+                    <th>Status</th>
+                </tr>
+
+                <?php
+                    $sql = "SELECT eno,name,bus_route,status,id FROM student";
+                    $result = mysqli_query($conn, $sql);
+                    
+                    if (mysqli_num_rows($result) > 0) {
+                      // output data of each row
+                      while($row = mysqli_fetch_assoc($result)) {
+                        
+                            echo "<tr><td>".$row['eno']."</td>";
+                            echo "<td>".$row['name']."</td>";
+                            echo "<td>".$row['bus_route']."</td>";
+
+                            echo "<td>";
+
+                            if($row['status']==1){
+                                echo '<p><a href="active.php?id='.$row['id'].'&status=0" class="paid">Paid</a></p>';
+                            }else{
+                                echo '<p><a href="active.php?id='.$row['id'].'&status=1" class="pending">Pending</a></p>';
+                            }
+
+                            echo "</td>";
+                      }
+                    } else {
+                      echo "0 results";
+                    }
+                ?>
+
                 
-            while( $fetch = mysqli_fetch_assoc($select)){
-        ?>
-            <div class="account_box">
-                <?php 
-                if($fetch['image'] == ''){
-                    echo '<img src="img/default-avatar.png">';
-                }else{
-                    echo '<img src="uploaded_img/'.$fetch['image'].'">';
-                }?>
-                    <br>  
-                    <h3>user id :<?php echo $fetch['id']; ?></h3> 
-                    <h3>username:<?php echo $fetch['name']; ?></h3>  
-                    <h3>email:<?php echo $fetch['email']; ?></h3> 
-                    <h3>user type:<?php echo $fetch['user_type']; ?></h3>  
-                    <a href="admin_accounts.php?delete=<?= $fetch['id']; ?>" onclick="return confirm('delete this user?');">delete</a>
-            </div>
-        <?php } ?>
+            </table>
     </div>
+
 </body>
 
 </html>
-
-

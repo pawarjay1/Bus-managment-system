@@ -21,18 +21,24 @@ if(!isset($_SESSION['name'])){
 
     <link rel="stylesheet" href="./css/update_profile.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>perant page</title>
+    <title>Student details</title>
 
     <style>
-        .mainn .txx{
-    color: rgba(51, 51, 51, 0.817); 
-    margin-top: 40px;
-    margin-left: 20px;
-    font-size: 1.3rem;
-    height: auto;
-    width: 100%; 
-    text-align: center;
-}
+    table,th,td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px; 
+        text-align: center;
+    }
+    th {
+        background-color: #8581fc;
+    }
+    .paid{
+        color:green; 
+    }
+    .peding{
+        color:red; 
+    }
     </style>
 </head>
 
@@ -44,10 +50,10 @@ if(!isset($_SESSION['name'])){
                 <i class="fa-solid fa-user"></i>
                 <div class="logo_name"><?php echo $_SESSION['uname'] ?> Panel</div>
             </div>
-            
+
         </div>
         <ul class="nav_list">
-            
+
             <li>
                 <a href="perant_page.php">
                     <i class='bx bx-home-alt'></i>
@@ -55,7 +61,7 @@ if(!isset($_SESSION['name'])){
                 </a>
 
             </li>
-
+            
             <li>
                 <a href="parent_gallery.php">
                     <i class='bx bx-folder'></i>
@@ -63,7 +69,7 @@ if(!isset($_SESSION['name'])){
                 </a>
 
             </li>
-            
+
             <li>
                 <a href="perant_profile.php">
                     <i class='bx bx-user'></i>
@@ -80,13 +86,12 @@ if(!isset($_SESSION['name'])){
             </li>
 
             <li>
-                <a href="parent_student_detail.php">
+                <a href="parent_student_detail.php" class="active">
                     <i class='bx bx-chat'></i>
                     <span class="link_name">student info</span>
                 </a>
 
             </li>
-            
             <!-- <li>
                 <a href="#">
                     <i class='bx bxs-user-rectangle'></i>
@@ -109,7 +114,7 @@ if(!isset($_SESSION['name'])){
 
             </li> -->
             <li>
-                <a href="#"  class="active">
+                <a href="perant_location.php">
                     <i class='bx bx-map'></i>
                     <span class="link_name">location</span>
                 </a>
@@ -132,44 +137,44 @@ if(!isset($_SESSION['name'])){
             </li>
         </ul>
     </div>
-    <div class="mainn">
-        
-            <div class="txx">
-                <h3>Copy the below Clipboard and Paste it on Google Maps</h3>
-                <h3>So you can check current location of School Bus</h3>
-            </div>
-            <?php
-            $select = mysqli_query($conn, "SELECT * FROM `gps_track`") or die('query failed');
-                
-            while( $fetch = mysqli_fetch_assoc($select)){
-            ?>
-            <div class="update-profile">
-                
-                <div class="copyfield">
-                    <span id="link"><?php echo $fetch['track_lat']; echo ","; echo $fetch['track_lng']; ?></span>
-                    <span id="copy-btn">Copy</span>
-                </div>
+    <div class="main">
+        <!-- <div class="update-profile"> -->
+            <table style="width:100%">
+                <tr>
+                    <th>Enrollment no</th>
+                    <th>Student Name</th>
+                    <th>Bus Route</th>
+                    <th>Fees</th>
+                </tr>
 
-                <div class="txx">
-                <p>above Clipboard latitude and longitude will change according Bus location.</p>
-                </div>
-            </div>
-            <?php } ?>
-        
+                <?php
+                    $sql = "SELECT eno,name,bus_route,status FROM student";
+                    $result = mysqli_query($conn, $sql);
+                    
+                    if (mysqli_num_rows($result) > 0) {
+                      // output data of each row
+                      while($row = mysqli_fetch_assoc($result)) {
+                        
+                            echo "<tr><td>".$row['eno']."</td>";
+                            echo "<td>".$row['name']."</td>";
+                            echo "<td>".$row['bus_route']."</td>";
+
+                            echo "<td>";
+                            if($row['status']==1){
+                                echo '<p class="paid">paid</p>';
+                            }
+                            else{echo '<p class="peding">pending</p>'; }
+                            echo "</td>"; 
+                      }
+                    } else {
+                      echo "0 results";
+                    }
+                ?>
+
+                
+            </table>
+        <!-- </div> -->
     </div>
-
-    <script>
-        var copybtn = document.getElementById("copy-btn");
-        var link = document.getElementById("link");
-
-        copybtn.onclick = function () {
-            navigator.clipboard.writeText(link.innerHTML);
-            copybtn.innerHTML = "Copied"
-            setTimeout(function (){
-                copybtn.innerHTML = "Copy"
-            }, 2000)
-        }
-    </script>
 </body>
 
 </html>

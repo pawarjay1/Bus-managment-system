@@ -4,8 +4,8 @@
 
 session_start();
 
-if(!isset($_SESSION['name'])){
-   header('location:login.php');
+if (!isset($_SESSION['name'])) {
+    header('location:login.php');
 }
 
 ?>
@@ -33,10 +33,10 @@ if(!isset($_SESSION['name'])){
                 <i class="fa-solid fa-user"></i>
                 <div class="logo_name"><?php echo $_SESSION['uname'] ?> Panel</div>
             </div>
-            
+
         </div>
         <ul class="nav_list">
-            
+
             <li>
                 <a href="#" class="active">
                     <i class='bx bx-grid-alt'></i>
@@ -50,7 +50,7 @@ if(!isset($_SESSION['name'])){
                     <span class="link_name">Profile</span>
                 </a>
 
-            <!-- </li>
+                <!-- </li>
             <li>
                 <a href="#">
                     <i class='bx bx-chat'></i>
@@ -105,17 +105,16 @@ if(!isset($_SESSION['name'])){
     </div>
     <div class="main">
         <div class="row">
-        <div class="title">Updated</div>
-        <div class="data" id="date"></div>
+            <div class="title">Updated</div>
+            <div class="data" id="date"></div>
         </div>
         <div class="row">
-        <div class="title">Latitude, Longitude</div>
-        <div class="data">
-            <span id="lat"></span>, <span id="lng"></span>
+            <div class="title">Latitude, Longitude</div>
+            <div class="data">
+                <span id="lat"></span>, <span id="lng"></span>
+            </div>
         </div>
-        </div>
-    </div> 
+    </div>
 </body>
 
 </html>
-
