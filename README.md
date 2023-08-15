@@ -1,6 +1,6 @@
 # Bus-managment-system
 
-The project is currently under development. The main idea of the project is for management of the School/College Bus details and tracking location of the Bus. This project is based on php/mysql.
+The main idea of the project is for management of the School/College Bus details and tracking location of the Bus. This project is based on php/mysql.
 
 Some SNAPSHOTS
 
